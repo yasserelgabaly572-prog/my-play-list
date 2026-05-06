@@ -294,24 +294,71 @@ button:active {
 }
 
 /* Responsive design */
+
+/* Tablets and smaller screens (768px and below) */
 @media (max-width: 768px) {
-    .videoplayer {
-        grid-template-columns: 1fr;
+    body {
+        padding: 10px;
     }
     
-    video {
+    .navbar {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo {
+        font-size: 1.2em;
+    }
+    
+    .navlinks {
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .navlinks a {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+    
+    .videoplayer {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    #video-container {
+        min-height: 250px;
+    }
+    
+    #video-title {
         grid-column: 1;
-        grid-row: 1;
+        font-size: 1em;
+        padding: 10px 0;
     }
     
     .controls {
         grid-column: 1;
-        grid-row: 2;
+        grid-row: auto;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    button {
+        padding: 10px 16px;
+        font-size: 16px;
     }
     
     .playlist {
         grid-column: 1;
-        grid-row: 3;
+        grid-row: auto;
+    }
+    
+    .playlist h3 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
     }
     
     .videolist {
@@ -320,17 +367,308 @@ button:active {
         overflow-x: auto;
         overflow-y: hidden;
         padding-bottom: 10px;
+        gap: 8px;
     }
     
     .videolist div {
-        min-width: 150px;
+        min-width: 140px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        padding: 10px;
+        font-size: 0.9em;
     }
     
     header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+        margin-top: 60px;
+    }
+    
+    .digital-circus {
+        height: 400px;
+    }
+    
+    .digital-circus-context {
+        font-size: 0.9em;
+    }
+    
+    .digital-circus-context h2 {
+        font-size: 1.3em;
+    }
+    
+    .about {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    
+    .about p {
+        font-size: 1.1em !important;
+    }
+    
+    .comments {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    
+    .comments h2 {
+        font-size: 1.5em;
+    }
+    
+    #commentInput {
+        min-height: 80px;
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    .like-btn, .dislike-btn, .delete-comment {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+    
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 20px;
+    }
+    
+    footer {
+        padding: 20px;
+    }
+    
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+/* Small phones (480px and below) */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+    
+    .navbar {
+        padding: 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .logo {
+        font-size: 1em;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    
+    .navlinks {
+        gap: 5px;
+        flex: 1 1 100%;
+        justify-content: space-around;
+    }
+    
+    .navlinks a {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+    
+    header h1 {
+        font-size: 1.3em;
+        margin-top: 80px;
+    }
+    
+    .digital-circus {
+        height: 300px;
+    }
+    
+    .digital-circus-context {
+        font-size: 0.75em;
+    }
+    
+    .digital-circus-context h2 {
+        font-size: 1em;
+    }
+    
+    .digital-circus-context p {
+        font-size: 0.7em;
+    }
+    
+    .about {
+        padding: 12px;
+        margin: 12px auto;
+    }
+    
+    .about h2 {
+        font-size: 1.3em;
+    }
+    
+    .about p {
+        font-size: 0.95em !important;
+        line-height: 1.5;
+    }
+    
+    .videoplayer {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    #video-container {
+        min-height: 200px;
+    }
+    
+    #video-title {
+        font-size: 0.9em;
+        padding: 8px 0;
+    }
+    
+    .controls {
+        gap: 6px;
+    }
+    
+    button {
+        padding: 8px 12px;
+        font-size: 14px;
+        flex: 1 1 calc(50% - 3px);
+    }
+    
+    .playlist h3 {
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+    
+    .videolist {
+        max-height: 250px;
+        gap: 6px;
+    }
+    
+    .videolist h4 {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+    
+    .videolist div {
+        min-width: 120px;
+        padding: 8px;
+        font-size: 0.8em;
+    }
+    
+    .comments {
+        padding: 12px;
+        margin: 15px auto;
+    }
+    
+    .comments h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+    
+    .comments-container {
+        gap: 12px;
+    }
+    
+    .comment-form {
+        gap: 8px;
+    }
+    
+    #commentInput {
+        min-height: 70px;
+        font-size: 16px;
+        padding: 8px;
+    }
+    
+    #submitComment {
+        padding: 10px 20px;
+        font-size: 14px;
+        align-self: flex-start;
+    }
+    
+    #deleteComments {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    
+    .comments-list {
+        max-height: 400px;
+        gap: 10px;
+    }
+    
+    .comment {
+        padding: 12px;
+    }
+    
+    .comment-author {
+        font-size: 0.95em;
+        margin-bottom: 5px;
+    }
+    
+    .comment-text {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+    
+    .comment-actions {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .like-btn, .dislike-btn {
+        padding: 6px 8px;
+        font-size: 12px;
+        flex: 1 1 auto;
+        min-width: 60px;
+    }
+    
+    .delete-comment {
+        padding: 6px 8px;
+        font-size: 12px;
+        flex: 1 1 100%;
+    }
+    
+    .scroll-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 18px;
+    }
+    
+    footer {
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    footer p {
+        font-size: 0.8em;
+    }
+}
+
+/* Large tablets (1024px and below) */
+@media (max-width: 1024px) {
+    .videoplayer {
+        grid-template-columns: 1.5fr 1fr;
+    }
+    
+    main {
+        margin: 0 5px;
+    }
+    
+    .videolist {
+        max-height: 400px;
+    }
+}
+
+/* Landscape phones (height constraints) */
+@media (max-height: 600px) {
+    .digital-circus {
+        height: 250px;
+    }
+    
+    .navbar {
+        padding: 8px 15px;
+    }
+    
+    header h1 {
+        margin-top: 40px;
+        font-size: 1.5em;
     }
 }
 
