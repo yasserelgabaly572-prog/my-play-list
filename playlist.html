@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Playlist</title>
+<link rel="stylesheet" href="playlist.css">
+</head>
+<body>
+    <header>
+>
+        <nav class="navbar">
+            <h2 class="logo">السرك الرقمي</h2>
+            <ul class="navlinks">
+                <li><a href="#home" id="link">Home</a></li>
+                <li><a href="#about"id="link">About</a></li>
+                <li><a href="#playlist"id="link">Playlist</a></li>
+            </ul>
+        </nav>
+        <br><br><br>
+    </header>
+<section class="digital-circus" id="home">
+    <img src="digital cicus image 1.webp" alt="Digital Circus Image 1" class="circus image">
+    <div class="digital-circus-context">
+        <h2>Welcome to the Digital Circus!</h2>
+        <p>Experience the magic of technology and creativity in one place. Join us for a thrilling adventure through the world of digital wonders.</p>
+    </div>
+</section>
+<section class="about"id="about">
+    <h2>About Us</h2>
+    <p style="font-size: 1.8em; line-height: 1.6;">
+        We are passionate about creating a dynamic digital space that brings together entertainment, creativity, and technology in a fun and engaging way. Our platform is designed to offer a wide range of carefully curated content that appeals to different interests, whether you’re here to explore exciting videos, learn new skills, or simply enjoy high-quality digital entertainment. We believe that the online world should be a place where imagination thrives, and that’s why we focus on delivering content that inspires curiosity and encourages creativity.
+
+At the heart of our vision is the idea of the “Digital Circus” — a vibrant, ever-evolving environment where every piece of content feels like part of an exciting show. From educational clips and creative showcases to lighthearted and entertaining moments, we aim to provide something for everyone. Our goal is not only to entertain but also to create a meaningful experience that leaves a lasting impression on our audience.
+
+We are committed to continuous improvement, always exploring new ideas and technologies to enhance your experience. Whether you are visiting for the first time or returning for more, we strive to make every interaction enjoyable, smooth, and memorable. Through innovation and creativity, we hope to build a community where users feel inspired, connected, and eager to discover what comes next.</p>
+
+</section>
+    <main>
+    <section class="videoplayer">
+        <div id="video-container">
+            <div id="video"></div>
+        </div>
+        <div id="video-title" style="grid-column: 1; font-size: 1.2em; color: #333; font-weight: bold;"></div>
+        <div class="controls">
+            <button id="prev">⏮️ Previous</button>
+            <button id="play">▶️ Play</button>
+            <button id="pause">⏸️ Pause</button>
+            <button id="next">⏭️ Next</button>
+        </div>
+        <div class="playlist"id="playlist">
+            <h3>Playlist</h3>
+<aside id="list" class="videolist">
+<h4>Videos</h4>
+</aside>
+        </div>
+    </section>
+</main>
+<section class="comments" id="comments">
+    <h2>Comments</h2>
+    <div class="comments-container">
+        <div class="comment-form">
+            <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
+            <button id="submitComment">Submit</button>
+            <button id="deleteComments">Delete All Comments</button>
+        </div>
+        <div id="commentsList" class="comments-list">
+            <p style="color: #999;">No comments yet. Be the first to comment!</p>
+        </div>
+    </div>
+</section>
+<button id="scrollToTop" class="scroll-to-top">⬆️</button>
+<footer>
+    <p>&copy; Made by Yasser Ahmed. All rights reserved.</p>
+</footer>
+</body>
+    <script src="playlist.js"></script>
+</html>
