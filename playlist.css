@@ -293,6 +293,215 @@ button:active {
     color: white;
 }
 
+/* Comments Section Styling */
+.comments {
+    background: white;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.comments h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: 700;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 15px;
+}
+
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.comment-form {
+    background: #f8f9ff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #e0e7ff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#commentInput {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#commentInput:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#commentInput::placeholder {
+    color: #999;
+}
+
+.comment-form > div {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#submitComment, #deleteComments {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submitComment {
+    background-color: #667eea;
+    color: white;
+    flex: 1;
+    min-width: 150px;
+}
+
+#submitComment:hover {
+    background-color: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+#submitComment:active {
+    transform: translateY(0);
+}
+
+#deleteComments {
+    background-color: #ff6b6b;
+    color: white;
+    flex: 1;
+    min-width: 150px;
+}
+
+#deleteComments:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+#deleteComments:active {
+    transform: translateY(0);
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 800px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.comments-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.comments-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.comments-list::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}
+
+.comments-list::-webkit-scrollbar-thumb:hover {
+    background: #764ba2;
+}
+
+.comment {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.comment:hover {
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+    transform: translateX(5px);
+}
+
+.comment-author {
+    color: #667eea;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.comment-text {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    word-wrap: break-word;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.like-btn, .dislike-btn, .delete-comment {
+    padding: 8px 14px;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.like-btn:hover {
+    background: #e8f5e9;
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.dislike-btn:hover {
+    background: #ffebee;
+    border-color: #f44336;
+    color: #f44336;
+}
+
+.delete-comment:hover {
+    background: #ffe0e0;
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+.like-btn:active, .dislike-btn:active, .delete-comment:active {
+    transform: scale(0.95);
+}
+
 /* Responsive design */
 
 /* Tablets and smaller screens (768px and below) */
@@ -346,7 +555,9 @@ button:active {
     }
     
     #video-container {
-        min-height: 250px;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        min-height: auto;
     }
     
     #video-title {
@@ -425,16 +636,40 @@ button:active {
     .comments {
         padding: 15px;
         margin: 20px auto;
+        border-radius: 12px;
     }
     
     .comments h2 {
         font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    
+    .comment-form {
+        gap: 10px;
+        padding: 15px;
     }
     
     #commentInput {
         min-height: 80px;
         font-size: 16px;
         padding: 10px;
+    }
+    
+    #submitComment, #deleteComments {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .comment {
+        padding: 12px;
+    }
+    
+    .comment-author {
+        font-size: 14px;
+    }
+    
+    .comment-text {
+        font-size: 13px;
     }
     
     .like-btn, .dislike-btn, .delete-comment {
@@ -449,6 +684,7 @@ button:active {
         right: 20px;
         font-size: 20px;
     }
+    
     
     footer {
         padding: 20px;
@@ -529,7 +765,9 @@ button:active {
     }
     
     #video-container {
-        min-height: 200px;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        min-height: auto;
     }
     
     #video-title {
@@ -571,6 +809,7 @@ button:active {
     .comments {
         padding: 12px;
         margin: 15px auto;
+        border-radius: 10px;
     }
     
     .comments h2 {
@@ -579,10 +818,16 @@ button:active {
     }
     
     .comments-container {
-        gap: 12px;
+        gap: 15px;
     }
     
     .comment-form {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .comment-form > div {
+        flex-direction: column;
         gap: 8px;
     }
     
@@ -592,24 +837,20 @@ button:active {
         padding: 8px;
     }
     
-    #submitComment {
-        padding: 10px 20px;
-        font-size: 14px;
-        align-self: flex-start;
-    }
-    
-    #deleteComments {
+    #submitComment, #deleteComments {
         padding: 10px 15px;
-        font-size: 13px;
+        font-size: 14px;
+        width: 100%;
     }
     
     .comments-list {
-        max-height: 400px;
+        max-height: 300px;
         gap: 10px;
     }
     
     .comment {
         padding: 12px;
+        border-left-width: 3px;
     }
     
     .comment-author {
@@ -622,22 +863,20 @@ button:active {
         margin-bottom: 8px;
     }
     
+    .comment-time {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+    
     .comment-actions {
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 8px;
     }
     
-    .like-btn, .dislike-btn {
-        padding: 6px 8px;
+    .like-btn, .dislike-btn, .delete-comment {
+        padding: 8px 10px;
         font-size: 12px;
-        flex: 1 1 auto;
-        min-width: 60px;
-    }
-    
-    .delete-comment {
-        padding: 6px 8px;
-        font-size: 12px;
-        flex: 1 1 100%;
+        width: 100%;
     }
     
     .scroll-to-top {
